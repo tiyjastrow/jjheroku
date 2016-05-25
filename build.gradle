@@ -30,3 +30,8 @@ dependencies {
 task stage {
     dependsOn build
 }
+
+jar {
+    baseName = 'template'
+    version = '1.0.0'
+}
