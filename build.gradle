@@ -16,6 +16,11 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'spring-boot'
 
+jar {
+    baseName = 'template'
+    version = '0.0.1-SNAPSHOT'
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -24,14 +29,10 @@ repositories {
 }
 
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('org.springframework.boot:spring-boot-starter-web')
 }
 
 task stage {
     dependsOn build
-}
-
-jar {
-    baseName = 'template'
-    version = '1.0.0'
 }
