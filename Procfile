@@ -1,1 +1,1 @@
-web:    java -cp "build/libs/*.jar" com.theironyard.TemplateApplication
+web:    java -cp "build/libs/*.jar" org.springframework.boot.loader.JarLauncher
