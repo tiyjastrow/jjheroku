@@ -5,18 +5,35 @@
 <body>
 <h2>Here is a list of Java Back-end assignments:</h2>
 
+<ol id="assignments">
 <table border="0" cellspacing="5">
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Required</th>
-    </tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Required?</th>
     {{#assignments}}
-        <tr>
-            <td>{{name}}</td><td>{{description}}</td><td>{{required}}</td>
-        </tr>
+    <tr>
+        <td><li>{{name}}</li></td>
+        <td>{{description}}</td>
+        <td>[ {{required}} ]<span style="visibility: hidden;">{{id}}</span> </td>
+    </tr>
     {{/assignments}}
 </table>
+</ol>
+
+<script>
+    function inactivate() {
+        var tr = document.getElementById("assignments");
+        var items = tr.getElementsByTagName("tr");
+        var cells;
+        for (var i = 0; i < items.length; ++i) {
+            if (items[i].innerHTML.indexOf('true') < 0 && i > 0 ) {
+                cells = items[i].getElementsByTagName('td');
+                cells[2].style.backgroundColor = 'pink';
+            }
+        }
+    }
+    inactivate();
+</script>
 
 </body>
 </html>

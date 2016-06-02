@@ -38,21 +38,21 @@ public class TemplateController {
             assignments.add(new Assignment("Review week 2", "Review of the last 2 weeks", true));
             assignments.add(new Assignment("JavaFX", "JavaFX app", false));
             assignments.add(new Assignment("Android", "Android app", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
-            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("Agile User Stories & TDD", "Test First. Agile Test Driven Development.", false));
+            assignments.add(new Assignment("HTTP Routes and HTML Templates", "create Microblog app \"Messages\" with Spark and Mustache", true));
+            assignments.add(new Assignment("HTTP Sessions", "Add to microblog new project \"MoreMessages\"", true));
+            assignments.add(new Assignment("Advanced HTTP Routes", "Fork 'PeopleWeb' read CSV file with Pagination", true));
+            assignments.add(new Assignment("Review HTTP", "CRUD app using Spark", true));
+            assignments.add(new Assignment("SQL Basics", "Clone GameTracker create new 'GameTrackerDb' using H2 database", true));
+            assignments.add(new Assignment("API Joins", "Clone ToDoDatabase create new 'ToDoDb_Joins' and TDD", true));
+            assignments.add(new Assignment("SQL API", "Clone People Web create new 'PeopleWebDb', SQL Paging", true));
+            assignments.add(new Assignment("Spring Basics", "create MicroblogSpring", true));
+            assignments.add(new Assignment("Hibernate Basics", "add database to MicroblogSpring", true));
+            assignments.add(new Assignment("Hibernate Query Methods and Joins", "create 'Purchases' to show customer sales from CSV file", false));
+            assignments.add(new Assignment("Scala Basics", "create 'HelloScala' to practice Scala fundamentals", false));
+            assignments.add(new Assignment("Functional Scala", "Create 'ScalaPurchases' with purchases.csv", false));
+            assignments.add(new Assignment("More Scala and Security", "Add to GameTrackerSpring to provide a secure login by Encrypting password", false));
+            assignments.add(new Assignment("Playframework ...", "Create 'PlayGames' using Activator \"PlayScalaSeed\" Template", false));
 
             assignmentRepository.save(assignments);
         }
