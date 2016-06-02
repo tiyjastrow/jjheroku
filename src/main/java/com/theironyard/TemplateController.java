@@ -1,35 +1,63 @@
 package com.theironyard;
 
-import com.theironyard.entities.Widget;
-import com.theironyard.repositories.WidgetRepository;
+import com.theironyard.entities.Assignment;
+import com.theironyard.repositories.AssignmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 @Controller
 public class TemplateController {
 
     @Autowired
-    WidgetRepository widgetRepository;
+    AssignmentRepository assignmentRepository;
+
+    @RequestMapping(path = "/clear")
+    public String clear(Model model){
+        assignmentRepository.deleteAll();
+        return "home";
+    }
 
     @RequestMapping(path = "/")
     public String home(Model model){
 
-        if(widgetRepository.count() == 0) {
-            ArrayList<Widget> widgets = new ArrayList<>();
+        if(assignmentRepository.count() == 0) {
+            ArrayList<Assignment> assignments = new ArrayList<>();
 
-            for(int x = 0 ; x < 10 ; x++) {
-                widgets.add(new Widget("Example Widget " + x, "Widget " + x + " is very big", new Random().nextDouble() * 100));
-            }
+            assignments.add(new Assignment("Arrays and Classes", "Create 5 of your own class examples", true));
+            assignments.add(new Assignment("Methods", "write constructors, setters, and getters", true));
+            assignments.add(new Assignment("Control Flow", "Create a program that mimics an ATM.", true));
+            assignments.add(new Assignment("Dynamic Data Structures", "Extend your ATM project to manage bank accounts.", true));
+            assignments.add(new Assignment("Review", "Inventory tracking system", true));
+            assignments.add(new Assignment("Object Oriented Programming", "Continue enhancing your inventory project", true));
+            assignments.add(new Assignment("File I/O", "FileIO - save your work!", true));
+            assignments.add(new Assignment("Testing and Debugging", "(File I/O ..Continued)", true));
+            assignments.add(new Assignment("Review week 2", "Review of the last 2 weeks", true));
+            assignments.add(new Assignment("JavaFX", "JavaFX app", false));
+            assignments.add(new Assignment("Android", "Android app", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
+            assignments.add(new Assignment("ASSIGNMENT", "DESCRIPTION", false));
 
-            widgetRepository.save(widgets);
+            assignmentRepository.save(assignments);
         }
 
-        model.addAttribute("widgets", widgetRepository.findAll());
+        model.addAttribute("assignments", assignmentRepository.findAll());
 
         return "home";
     }

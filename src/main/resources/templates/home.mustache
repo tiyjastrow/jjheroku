@@ -3,21 +3,19 @@
     <title>TIY Java Gradle Template</title>
 </head>
 <body>
-<h1>This is the home.mustache file.</h1>
+<h2>Here is a list of Java Back-end assignments:</h2>
 
-<h2>Here is a list of widgets:</h2>
-
-<table border="1">
+<table border="0" cellspacing="5">
     <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Weight</th>
+        <th>Required</th>
     </tr>
-    {{#widgets}}
+    {{#assignments}}
         <tr>
-            <td>{{name}}</td><td>{{description}}</td><td>{{weightLbs}} lbs</td>
+            <td>{{name}}</td><td>{{description}}</td><td>{{required}}</td>
         </tr>
-    {{/widgets}}
+    {{/assignments}}
 </table>
 
 </body>

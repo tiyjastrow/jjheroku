@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Widget {
+public class Assignment {
 
     @Id
     @GeneratedValue
@@ -15,13 +15,13 @@ public class Widget {
 
     String description;
 
-    double weightLbs;
+    boolean required;
 
-    public Widget(){}
+    public Assignment(){}
 
-    public Widget(String name, String description, double weightLbs) {
+    public Assignment(String name, String description, boolean required) {
         this.name = name;
         this.description = description;
-        this.weightLbs = weightLbs;
+        this.required = required;
     }
 }
