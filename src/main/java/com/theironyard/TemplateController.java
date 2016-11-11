@@ -27,33 +27,39 @@ public class TemplateController {
         if(assignmentRepository.count() == 0) {
             ArrayList<Assignment> assignments = new ArrayList<>();
 
-            assignments.add(new Assignment("Arrays and Classes", "Create 5 of your own class examples", true));
-            assignments.add(new Assignment("Methods", "write constructors, setters, and getters", true));
-            assignments.add(new Assignment("Control Flow", "Create a program that mimics an ATM.", true));
-            assignments.add(new Assignment("Dynamic Data Structures", "Extend your ATM project to manage bank accounts.", true));
-            assignments.add(new Assignment("Review", "Inventory tracking system", true));
-            assignments.add(new Assignment("Object Oriented Programming", "Continue enhancing your inventory project", true));
-            assignments.add(new Assignment("File I/O", "FileIO - save your work!", true));
-            assignments.add(new Assignment("Testing and Debugging", "(File I/O ..Continued)", true));
-            assignments.add(new Assignment("Review week 2", "Review of the last 2 weeks", true));
-            assignments.add(new Assignment("JavaFX", "JavaFX app", false));
-            assignments.add(new Assignment("Android", "Android app", false));
-            assignments.add(new Assignment("Agile User Stories & TDD", "Test First. Agile Test Driven Development.", false));
-            assignments.add(new Assignment("HTTP Routes and HTML Templates", "create Microblog app \"Messages\" with Spark and Mustache", true));
-            assignments.add(new Assignment("HTTP Sessions", "Add to microblog new project \"MoreMessages\"", true));
-            assignments.add(new Assignment("Advanced HTTP Routes", "Fork 'PeopleWeb' read CSV file with Pagination", true));
-            assignments.add(new Assignment("Review HTTP", "CRUD app using Spark", true));
-            assignments.add(new Assignment("SQL Basics", "Clone GameTracker create new 'GameTrackerDb' using H2 database", true));
-            assignments.add(new Assignment("API Joins", "Clone ToDoDatabase create new 'ToDoDb_Joins' and TDD", true));
-            assignments.add(new Assignment("SQL API", "Clone People Web create new 'PeopleWebDb', SQL Paging", true));
-            assignments.add(new Assignment("Spring Basics", "create MicroblogSpring", true));
-            assignments.add(new Assignment("Hibernate Basics", "add database to MicroblogSpring", true));
-            assignments.add(new Assignment("Hibernate Query Methods and Joins", "create 'Purchases' to show customer sales from CSV file", false));
-            assignments.add(new Assignment("Scala Basics", "create 'HelloScala' to practice Scala fundamentals", false));
-            assignments.add(new Assignment("Functional Scala", "Create 'ScalaPurchases' with purchases.csv", false));
-            assignments.add(new Assignment("More Scala and Security", "Add to GameTrackerSpring to provide a secure login by Encrypting password", false));
-            assignments.add(new Assignment("Playframework ...", "Create 'PlayGames' using Activator \"PlayScalaSeed\" Template", false));
-
+            assignments.add(new Assignment("Arrays and Classes", "Project name: HelloWorld", true));
+            assignments.add(new Assignment("Methods", "Project name: Methods", true));
+            assignments.add(new Assignment("Control Flow", "Project name: ATM", true));
+            assignments.add(new Assignment("Dynamic Data Structures", "Project name: Banking", true));
+            assignments.add(new Assignment("Review 1", "Project name: InventoryTracker", true));
+            assignments.add(new Assignment("Object Oriented Programming", "Project name: OOinventory", true));
+            assignments.add(new Assignment("File I/O", "Project name: FileIO", true));
+            assignments.add(new Assignment("Testing and Debugging", "Project name: Countries", true));
+            assignments.add(new Assignment("Review week 2", "Project name: People", true));
+            assignments.add(new Assignment("JavaFX", "project called ContactsDesktop", false));
+            assignments.add(new Assignment("Agile User Stories & TDD", "(1) Trello board, plus (2) project name starting TDD-", false));
+            assignments.add(new Assignment("Android", "AndroidContacts", false));
+            assignments.add(new Assignment("HTTP Routes and HTML Templates", "called Messages", true));
+            assignments.add(new Assignment("Review Week 3", "Project Name: HangmanGame", true));
+            assignments.add(new Assignment("HTTP Sessions", "Project Name: MoreMessages", true));
+            assignments.add(new Assignment("Advanced HTTP Routes", "Fork the PeopleWeb project", true));
+            assignments.add(new Assignment("SQL Basics", "GameTrackerDb", true));
+            assignments.add(new Assignment("Review HTTP", "Project Name: CrudReviewHTTP", true));
+            assignments.add(new Assignment("API Joins", "ToDoDb_Joins", true));
+            assignments.add(new Assignment("JSON Routes (Spark)", "RegistrationForm", true));
+            assignments.add(new Assignment("(Optional) SQL Review", "Project name: PeopleWebDb", true));
+            assignments.add(new Assignment("Spring Basics", "Project Name: MicroblogSpring", true));
+            assignments.add(new Assignment("Hibernate Basics", "microblogDb", true));
+            assignments.add(new Assignment("Hibernate Query Methods and Joins", "Project: Purchases", false));
+            assignments.add(new Assignment("Review Spring 1", "Project: SpringCRUD", false));
+            assignments.add(new Assignment("JSON Routes", "Project: AnonUpload", true));
+            assignments.add(new Assignment("JSON Routes Continued", "IronGram", true));
+            assignments.add(new Assignment("More Spring Review", "Project: HannibalLecturer", false));
+            assignments.add(new Assignment("Scala Basics", "Fork HelloScala project", false));
+            assignments.add(new Assignment("Functional Scala", "ScalaPurchases", false));
+            assignments.add(new Assignment("More Scala and Security", "ScalaTraits", false));
+            assignments.add(new Assignment("Group Project", "Ping Pong Games Tracker", false));
+            assignments.add(new Assignment("Playframework ...", "PlayGames", false));
             assignmentRepository.save(assignments);
         }
 
