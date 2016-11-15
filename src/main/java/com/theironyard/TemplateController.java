@@ -23,7 +23,6 @@ public class TemplateController {
 
     @RequestMapping(path = "/")
     public String home(Model model){
-
         if(assignmentRepository.count() == 0) {
             ArrayList<Assignment> assignments = new ArrayList<>();
 
