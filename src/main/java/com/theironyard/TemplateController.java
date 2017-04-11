@@ -21,6 +21,12 @@ public class TemplateController {
         return "home";
     }
 
+    @RequestMapping(path = "/jjtest")
+    public String jjtest(Model model){
+        model.addAttribute("jjtest", "this is my jj test");
+        return "jjtest";
+    }
+
     @RequestMapping(path = "/")
     public String home(Model model){
         if(assignmentRepository.count() == 0) {
